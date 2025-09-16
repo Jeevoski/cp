@@ -2,21 +2,21 @@
 #include<stdlib.h>
 #include <stdbool.h>
 #define MAX 10
-// initilazing queue
+
 int queue[MAX];
 int rear = - 1;
 int front = -1;
-// Function to check if the queue is empty
+
 bool isEmpty() {
     return rear==front ;
 }
 
-// Function to check if the queue is full
+
 bool isFull() {
     return rear == MAX - 1;
 }
 
-void enqueue() // enqueue
+void enqueue() 
 {
 int item;
 if (isFull())
@@ -28,8 +28,8 @@ else
  rear = rear + 1;
  queue[rear] = item;
  }
-} /*End of insert()*/
-void dequeue() //dequeue
+} 
+void dequeue() 
 {
 if (isEmpty() )
     {
@@ -41,8 +41,8 @@ if (isEmpty() )
     front = front + 1;
     printf("\nElement deleted from queue is : %d\n", queue[front]);
     }
-} /*End of delete() ; if front==rear we also reset queue to utilize space*/
-void display()// print queue
+} 
+void display()
 {
 int i;
     if (isEmpty() )
@@ -55,16 +55,16 @@ int i;
         printf("\n");
     }
 }
-// Function to peek at the front item
+
 int peek() {
     if (isEmpty()) {
         printf("Queue is empty. Nothing to peek.\n");
-        return -1; // Error value
+        return -1; 
     } else {
         return queue[front+1];
     }
 }
-// Function to get the size of the queue
+
 int size() {
     if (isEmpty()) {
         return 0;
@@ -110,8 +110,8 @@ default:
 
 printf("\nWrong choice \n");
 
-} /*End of switch*/
+} 
 
-} /*End of while*/
+} 
 return 0;
-} /*End of main()*/
+} 
