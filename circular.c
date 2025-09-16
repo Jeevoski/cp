@@ -2,21 +2,21 @@
 #include<stdlib.h>
 #include <stdbool.h>
 #define MAX 10
-// initilazing queue
+
 int cqueue[MAX];
 int rear = 0;
 int front = 0;
-// Function to check if the cqueue is empty
+
 bool isEmpty() {
     return front==rear ;
 }
 
-// Function to check if the cqueue is full
+
 bool isFull() {
     return (rear+1)%MAX == front;
 }
 
-void enqueue() // enqueue
+void enqueue()
 {
 int item;
 if (isFull())
@@ -28,8 +28,8 @@ else
  rear = (rear + 1)%MAX;
  cqueue[rear] = item;
  }
-} /*End of insert()*/
-void dequeue() //dequeue
+} 
+void dequeue()
 {
      if(isEmpty())
      {
@@ -41,8 +41,8 @@ void dequeue() //dequeue
     front = (front + 1) %MAX;
     printf("\nElement deleted from queue is : %d\n", cqueue[front]);
     }
-} /*End of delete() */
-void display()// print queue
+} 
+void display()
 {
 int i;
     if (isEmpty() )
@@ -57,11 +57,11 @@ int i;
         
     }
 }
-// Function to peek at the front item
+
 int peek() {
     if (isEmpty()) {
         printf("Queue is empty. Nothing to peek.\n");
-        return -1; // Error value
+        return -1; 
     } else {
         return cqueue[front+1];
     }
@@ -101,8 +101,8 @@ default:
 
 printf("\nWrong choice \n");
 
-} /*End of switch*/
+}
 
-} /*End of while*/
+}
 return 0;
-} /*End of main()*/
+} 
