@@ -4,11 +4,11 @@
 
 #define MAX_SIZE 100
 
-// Global variables for the stack
+
 int stack[MAX_SIZE];
 int top = -1; // Initialize an empty stack
 
-// Function to push an element onto the stack
+
 void Push(int element) {
  if (top == MAX_SIZE - 1) {
      printf("Stack overflow: Cannot push element onto a full stack\n");
@@ -23,7 +23,7 @@ void Push(int element) {
 int Pop() {
  if (top == -1) {
      printf("Stack underflow: Cannot pop element from an empty stack\n");
- return -1; // Handle underflow (stack is empty)
+ return -1; 
  }
  int element = stack[top];
  top--;
@@ -31,7 +31,6 @@ int Pop() {
 }
 
 
-// Function to peek at the top element of the stack
 int Peek() {
  if (top == -1) {
      printf("Stack is empty Underflow!\n");
